@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#757575</color>
+    <color name="colorControlNormal">#6F6F6F</color>
+    <color name="colorControlActivated">#30A6E4</color>
+    <color name="colorControlHighlight">#BCBEBD</color>
+    <color name="colorButtonNormal">#D5D7D6</color>
+    <color name="colorAccent">#30A6E4</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_content">#333333</color>
+    <color name="text_remark">#999999</color>
+    <color name="line_title">#c2c2c2</color>
+</resources>

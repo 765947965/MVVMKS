@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+
+    dataBinding {
+        enabled = true
+    }
+
+    signingConfigs {
+        defaultSign {
+            keyAlias 'aisin'
+            keyPassword 'aisin.android'
+            storeFile file('F:\\ym\\Aisin_Android.Android')
+            storePassword 'aisin.android'
+        }
+    }
+
+    defaultConfig {
+        applicationId "net.yr.mvvm.app"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            moduleName "jniAPP"
+            ldLibs "log", "z", "m"
+            abiFilters "armeabi", "armeabi-v7a", "x86", "x86_64"
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.defaultSign
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            signingConfig signingConfigs.defaultSign
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.android.support:recyclerview-v7:24.2.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.zhy:okhttputils:2.6.2'
+}

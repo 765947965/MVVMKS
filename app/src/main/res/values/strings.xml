@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MVVM</string>
+    <string name="nameFormatWithAge">Hello %1$s,%2$d ages</string>
+    <string name="empty"> </string>
+</resources>
